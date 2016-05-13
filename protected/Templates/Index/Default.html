@@ -1,7 +1,10 @@
 {% extends 'Index.html' %}
 
 {% block content %}
-    <h1>{{h1}}</h1>
+<h1>{{ app.config.application_title }}</h1>
+<h3>Самая свежая новость</h3>
+<t4:block path="//News/Last"/>
+<a href="/news"><h3>Все новости</h3></a>
 {% endblock %}
 
 {% block head_title %}{{parent()}}{% endblock %}

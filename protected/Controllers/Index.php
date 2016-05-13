@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\News;
 use T4\Mvc\Controller;
 
 class Index
@@ -10,12 +11,7 @@ class Index
 
     public function actionDefault()
     {
-        $this->data->h1 = $this->app->config['application_title'];
-    }
 
-    public function actionAbout()
-    {
-        
     }
 
 }

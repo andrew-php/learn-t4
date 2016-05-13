@@ -1,0 +1,17 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+<h1 style="text-align: center;">Добавление новости</h1>
+{% if msg is defined %}
+<div class="alert alert-success" role="alert">{{msg}}</div>
+{% endif %}
+<form method="post" name="add">
+    <div class="form-group"><label for="title">Заголовок новости</label><input class="form-control" type="text" name="title" id="title" value=""></div>
+    <div class="form-group"><label for="title">Текст новости</label><input class="form-control" type="text" name="text" id="text" value=""></div>
+    <div class="form-group"><label for="title">Ссылка на изображение</label><input class="form-control" type="text" name="img" id="img" value=""></div>
+    <button type="submit" class="btn btn-default" id="submit">Добавить новость</button>
+</form>
+<a href="/news"><h3>Посмотреть все новости</h3></a>
+{% endblock %}
+
+{% block head_title %}Добавление новости. {{parent()}}{% endblock %}

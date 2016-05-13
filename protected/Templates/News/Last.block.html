@@ -1,0 +1,8 @@
+<div style="border: 2px dotted red; margin: 20px; padding: 10px;">
+    <h2 style="padding-top: 0; margin-top: 0">{{ article.title }}</h2>
+    <div class="row">
+        <div class="col-xs-2">{% if article.img is not empty %} <img class="img-responsive" src="{{ article.img }}" alt="{{ article.title }}"> {% endif %}</div>
+        <div class="col-md-10">{{ article.text }} <br> <a href="/news/{{ article.id }}">Посмотреть только эту новость</a></div>
+    </div>
+
+</div>

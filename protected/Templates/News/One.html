@@ -1,0 +1,22 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+
+{% if error_message is defined %}
+<h1 style="text-align: center; color: red;">Новости с таким идентификатором не существует!</h1>
+{% else %}
+<h1 style="text-align: center;">Новость номер {{ article.id }}</h1>
+
+<article style="border: 2px dotted red; margin: 20px; padding: 10px;">
+    <h2 style="padding-top: 0; margin-top: 0">{{ article.title }}</h2>
+    <div class="row">
+        <div class="col-xs-2">{% if article.img is not empty %} <img class="img-responsive" src="{{ article.img }}" alt="{{ article.title }}"> {% endif %}</div>
+        <div class="col-md-10">{{ article.text }}</div>
+    </div>
+</article>
+{% endif %}
+
+<a href="/news">Все новости</a>
+{% endblock %}
+
+{% block head_title %}Одна новость. {{parent()}}{% endblock %}
