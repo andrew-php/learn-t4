@@ -53,7 +53,7 @@ class Article
 
     public function isComplete()
     {
-        if(!is_null($this->__data['title']) && !is_null($this->__data['text'])) {
+        if(!empty($this->__data['title']) && !empty($this->__data['text'])) {
             return true;
         }
         
